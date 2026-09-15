@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brew &amp; Co design system preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* Plain-CSS mirror of tokens/tokens.css so this file opens without a build. */
+  :root {
+    --ink: #000; --brand-50: #fff4eb; --brand-100: #ffe4cf; --brand-200: #ffd5ad; --brand-300: #ffb27a;
+    --brand-400: #ff8a3d; --brand-500: #fe6802; --brand-600: #e05a00; --brand-700: #b84a00; --brand-800: #8a3700;
+    --paper: #fff; --mist: #fafafa; --fog: #f2f2f2; --line: #e6e6e6; --line-strong: #c2c2c2; --line-ink: #363636;
+    --text-body: #5c5c5c; --text-muted: #8a8a8a; --text-placeholder: #a3a3a3; --danger: #c62828;
+    --font-display: "Comfortaa", ui-rounded, system-ui, sans-serif;
+    --font-sans: "Raleway", system-ui, sans-serif;
+    --r-control: .375rem; --r-tile: .75rem; --r-card: 1.25rem; --r-rail: 1.5rem;
+    --shadow-card: 0 1px 2px rgb(0 0 0/.03), 0 24px 48px -28px rgb(254 104 2/.22);
+    --shadow-pill: 0 6px 16px -10px rgb(0 0 0/.18);
+    --ease: cubic-bezier(.2,.8,.2,1);
+  }
+  * { box-sizing: border-box; }
+  html { font-feature-settings: "lnum" 1; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.7; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: -.01em; line-height: 1.1; margin: 0; text-wrap: balance; }
+  p { margin: 0; text-wrap: pretty; }
+  :focus-visible { outline: 2px solid var(--brand-500); outline-offset: 3px; }
+  .container { max-width: 75rem; margin: 0 auto; padding: 0 1.5rem; }
+  .spec { padding: 4rem 0; border-top: 1px solid var(--line); }
+  .spec > .container > h2 { font-size: 2.25rem; margin-bottom: .5rem; }
+  .spec .lede { color: var(--text-body); max-width: 40rem; margin-bottom: 2.5rem; }
+  .row { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
+  .stack { display: flex; flex-direction: column; gap: 1rem; }
+  .cap { font-size: .75rem; color: var(--text-muted); margin-top: .5rem; }
+
+  /* Swatches */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 1rem; }
+  .sw { border-radius: var(--r-tile); border: 1px solid var(--line); overflow: hidden; }
+  .sw i { display: block; height: 4.5rem; }
+  .sw b { display: block; font-family: var(--font-display); font-size: .9rem; padding: .5rem .75rem 0; }
+  .sw small { display: block; color: var(--text-muted); font-size: .75rem; padding: 0 .75rem .6rem; }
+
+  /* Type */
+  .display { font-family: var(--font-display); font-weight: 300; font-size: clamp(4.5rem, 15vw, 13.5rem); line-height: .92; letter-spacing: -.02em; }
+  .kicker { color: var(--brand-500); font-weight: 600; font-size: 1.125rem; }
+  .body { color: var(--text-body); max-width: 40rem; }
+  .type-table td { padding: .75rem 1rem .75rem 0; vertical-align: baseline; border-bottom: 1px solid var(--line); }
+  .type-table td:first-child { color: var(--text-muted); font-size: .8rem; white-space: nowrap; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; height: 3rem; padding: 0 2rem; font: 600 1rem var(--font-sans); border: 1px solid transparent; cursor: pointer; text-decoration: none; transition: background-color .15s var(--ease), color .15s var(--ease); white-space: nowrap; }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: var(--ink); color: #fff; border-radius: 0; }
+  .btn-primary:hover { background: #262626; }
+  .btn-accent { background: var(--brand-500); color: #fff; border-radius: var(--r-control); font-weight: 700; }
+  .btn-accent:hover { background: var(--brand-600); }
+  .btn-outline { background: var(--paper); color: var(--ink); border-color: var(--line-ink); border-radius: var(--r-control); }
+  .btn-outline:hover { background: var(--mist); }
+  .btn-ghost { background: transparent; color: var(--ink); border-radius: var(--r-control); }
+  .btn-ghost:hover { color: var(--brand-700); }
+  .btn-sm { height: 2.5rem; padding: 0 1.25rem; font-size: .875rem; }
+  .btn-lg { height: 3.5rem; padding: 0 2.5rem; }
+  .btn[disabled] { opacity: .5; pointer-events: none; }
+  .ibtn { display: inline-flex; align-items: center; justify-content: center; background: var(--ink); color: #fff; border: 0; cursor: pointer; }
+  .ibtn-circle { width: 2.5rem; height: 2.5rem; border-radius: 999px; }
+  .ibtn-square { width: 2rem; height: 2rem; border-radius: var(--r-control); }
+  .ibtn svg { width: 1.125rem; height: 1.125rem; }
+
+  /* Nav */
+  .nav { display: flex; gap: 2.5rem; list-style: none; margin: 0; padding: 0; font-weight: 500; }
+  .nav li + li::before { content: "/"; color: var(--text-muted); margin-right: 2.5rem; }
+  .nav a { color: var(--ink); text-decoration: none; }
+  .nav a:hover, .nav a[aria-current] { color: var(--brand-700); }
+  .logo { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--brand-500); margin-left: .125rem; }
+
+  /* Inputs */
+  .field { display: flex; flex-direction: column; gap: .5rem; width: 100%; max-width: 22rem; }
+  .field label { font-size: .875rem; font-weight: 500; }
+  .input { height: 3rem; width: 100%; padding: 0 1rem; border: 1px solid var(--line-strong); border-radius: var(--r-control); font: 1rem var(--font-sans); color: var(--ink); background: var(--paper); transition: border-color .15s; }
+  .input::placeholder { color: var(--text-placeholder); }
+  .input:hover { border-color: var(--line-ink); }
+  .input:focus { outline: none; border-color: var(--brand-500); box-shadow: 0 0 0 1px var(--brand-500); }
+  .input[aria-invalid] { border-color: var(--danger); }
+  .field .err { color: var(--danger); font-size: .875rem; }
+  .inline { display: flex; width: 100%; max-width: 28rem; }
+  .inline .input { border-radius: var(--r-control) 0 0 var(--r-control); }
+  .inline .btn { flex-shrink: 0; }
+
+  /* Pills */
+  .tile { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: var(--r-tile); background: var(--brand-200); color: var(--brand-500); flex-shrink: 0; }
+  .tile svg { width: 1.25rem; height: 1.25rem; }
+  .pill { display: flex; align-items: center; }
+  .pill .tile { position: relative; z-index: 1; background: var(--brand-100); box-shadow: var(--shadow-pill); }
+  .pill span.label { margin-left: -.75rem; display: flex; align-items: center; height: 2.5rem; padding: 0 1rem 0 1.5rem; border-radius: var(--r-tile); background: var(--fog); font-size: .875rem; font-weight: 500; color: var(--text-body); }
+  .pills { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1rem; }
+  .pills li:nth-child(2) { transform: translateX(.75rem); }
+
+  /* Stat ring + arc */
+  .ring { position: relative; width: clamp(11rem, 18vw, 15rem); height: clamp(11rem, 18vw, 15rem); border-radius: 50%; background: var(--mist); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .arc { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; color: var(--brand-500); }
+  .arc-bottom { transform: rotate(135deg); } .arc-top { transform: rotate(-45deg); }
+  .ring .n { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.5rem, 5vw, 3.75rem); line-height: 1; letter-spacing: -.02em; }
+  .ring .l { margin-top: .75rem; font-weight: 500; color: var(--text-body); }
+  .rings { display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; align-items: center; position: relative; }
+  .rings li { list-style: none; position: relative; }
+  .sparkle { color: var(--brand-500); position: absolute; left: 50%; transform: translateX(-50%); }
+  .sparkle.ink { color: var(--ink); }
+
+  /* Arc media */
+  .media { position: relative; width: 100%; max-width: 22rem; aspect-ratio: 1; }
+  .media .disc { position: absolute; inset: 6%; border-radius: 50%; background: var(--mist); }
+  .media .tag { position: absolute; top: 0; left: 0; transform: translateY(-50%); z-index: 2; padding: 0 .75rem .75rem; border-left: 2px solid var(--brand-500); border-top: 2px solid var(--brand-500); border-top-left-radius: var(--r-rail); font-family: var(--font-display); font-weight: 500; font-size: 1.125rem; }
+  .media .img { position: absolute; inset: 12%; display: grid; place-items: center; }
+
+  /* Corner rail */
+  .rail { border: 0 solid var(--brand-500); padding: 2rem 2.5rem; max-width: 30rem; }
+  .rail-tr { border-top-width: 2px; border-right-width: 2px; border-top-right-radius: var(--r-rail); }
+  .rail-bl { border-bottom-width: 2px; border-left-width: 2px; border-bottom-left-radius: var(--r-rail); }
+
+  /* Cards */
+  .pcard { display: flex; flex-direction: column; width: 20rem; padding: .5rem; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--paper); transition: box-shadow .2s; }
+  .pcard:hover { box-shadow: var(--shadow-card); }
+  .pcard .well { aspect-ratio: 4/5; border-radius: var(--r-card); background: var(--paper); display: grid; place-items: center; }
+  .pcard .body { padding: 1.25rem 1rem 1rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .pcard h3 { font-size: 1.375rem; }
+  .pcard p { font-size: .875rem; color: var(--text-body); margin-top: .5rem; }
+  .pcard .foot { display: flex; width: 100%; justify-content: space-between; align-items: center; margin-top: 1.5rem; }
+  .pcard .price { font-family: var(--font-display); font-weight: 700; color: var(--brand-700); font-size: 1.125rem; }
+  .tcard { width: 22rem; padding: 2rem; border-radius: var(--r-card); background: var(--paper); box-shadow: var(--shadow-card); text-align: center; display: flex; flex-direction: column; align-items: center; margin: 0; }
+  .tcard .av { width: 5.5rem; height: 5.5rem; border-radius: 50%; background: linear-gradient(135deg, #9dc7de, #4f7d99); box-shadow: 0 0 0 1px var(--line); }
+  .tcard figcaption { margin-top: 1.25rem; font-family: var(--font-display); font-weight: 700; font-size: 1.125rem; color: var(--brand-700); }
+  .tcard figcaption small { display: block; font: 500 .75rem var(--font-sans); color: var(--text-muted); margin-top: .25rem; }
+  .tcard blockquote { margin: .75rem 0 0; font-size: .875rem; color: var(--text-body); }
+
+  /* Hero sample */
+  .hero { position: relative; overflow: hidden; padding: 1.5rem 0 4rem; }
+  .hero .kick { display: flex; justify-content: center; position: relative; }
+  .hero .kick .sparkle { left: 0; transform: none; top: .25rem; }
+  .hero h1 { text-align: center; margin-top: 1rem; }
+  .hero .grid { display: grid; grid-template-columns: 1fr minmax(18rem, 24rem) 1fr; gap: 2.5rem; align-items: end; margin-top: -.5em; }
+  .hero .glass { position: relative; aspect-ratio: 3/4; }
+  .hero .glow { position: absolute; inset: 5% -15%; background: radial-gradient(closest-side, rgb(254 104 2/.55), rgb(254 104 2/.22) 55%, transparent 100%); animation: glow-in .9s var(--ease) both; }
+  .hero .glass .cup { position: absolute; inset: 0; display: grid; place-items: end center; }
+  .hero .copy { max-width: 22rem; padding-bottom: 1.5rem; }
+  .hero .side { display: flex; flex-direction: column; align-items: flex-end; gap: 2.5rem; padding-bottom: 1.5rem; }
+  .hero .pricey { display: flex; align-items: baseline; gap: .75rem; font-size: .875rem; color: var(--text-muted); }
+  .hero .pricey i { display: inline-block; width: 1px; height: 1.5rem; background: var(--brand-500); align-self: center; }
+  .hero .pricey b { font-family: var(--font-display); font-size: 1.75rem; color: var(--ink); }
+  .hero .wm { position: absolute; right: -.5rem; top: 4rem; writing-mode: vertical-rl; font-family: var(--font-display); font-weight: 300; font-size: 9rem; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgb(0 0 0/.08); user-select: none; pointer-events: none; }
+  @keyframes glow-in { from { opacity: 0; transform: scale(.85);} to { opacity: 1; transform: scale(1);} }
+  @media (max-width: 64rem) { .hero .grid { grid-template-columns: 1fr; } .hero .side { align-items: flex-start; } .hero .wm { display: none; } .nav { display: none; } .type-table td:first-child { display: block; padding-bottom: 0; border: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  .footer { background: var(--mist); padding: 3rem 0; }
+</style>
+</head>
+<body>
+
+<!-- Hero sample -->
+<section class="hero">
+  <span class="wm" aria-hidden="true">Brew &amp; Co</span>
+  <div class="container">
+    <div class="row" style="justify-content:space-between; height:5rem;">
+      <a class="logo" href="#">Brew &amp; Co<span>.</span></a>
+      <ul class="nav"><li><a href="#" aria-current="page">Home</a></li><li><a href="#">Products</a></li><li><a href="#">About us</a></li><li><a href="#">Contact</a></li></ul>
+      <div class="row" style="gap:.75rem"><a class="btn btn-outline" href="#">Sign in</a><button class="ibtn ibtn-circle" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></button></div>
+    </div>
+    <div class="kick"><svg class="sparkle ink" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c.6 6.5 5.5 11.4 12 12-6.5.6-11.4 5.5-12 12-.6-6.5-5.5-11.4-12-12C6.5 11.4 11.4 6.5 12 0Z"/></svg><p class="kicker">Pure caffeine, nothing extra.</p></div>
+    <h1 class="display">Cold brew</h1>
+    <div class="grid">
+      <div class="copy"><p class="body">Cold brew is coffee in its rawest form: steeped slow, brewed cold, and packed with flavour. No heat, no bitterness, just smooth, high-caffeine energy that lasts.</p><a class="btn btn-primary btn-lg" href="#" style="margin-top:2rem">Buy now</a></div>
+      <div class="glass"><div class="glow" aria-hidden="true"></div><div class="cup"><svg width="200" height="360" viewBox="0 0 200 360" aria-label="Placeholder glass"><path d="M30 20h140l-18 320H48Z" fill="#c8793a"/><path d="M30 20h140l-6 110H36Z" fill="#f1d3b3"/><path d="M40 190h120l-12 140H52Z" fill="#8a4a1c" opacity=".8"/><rect x="30" y="20" width="140" height="10" fill="#fff" opacity=".6"/></svg></div></div>
+      <div class="side">
+        <ul class="pills">
+          <li class="pill"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg></span><span class="label">65% less acidity</span></li>
+          <li class="pill"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 9h11v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9Z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/></svg></span><span class="label">2x more caffeine</span></li>
+          <li class="pill"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="label">16-hour steeped</span></li>
+        </ul>
+        <p class="pricey">Price <i></i> <b>$14.99</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spec"><div class="container">
+  <h2>Colour</h2>
+  <p class="lede">Black and white carry the page. Orange is a line, a ring, a price. The only orange fills are the accent button and the icon tile.</p>
+  <div class="swatches">
+    <div class="sw"><i style="background:#000"></i><b>ink</b><small>#000000</small></div>
+    <div class="sw"><i style="background:#fe6802"></i><b>brand-500</b><small>#FE6802</small></div>
+    <div class="sw"><i style="background:#e05a00"></i><b>brand-600</b><small>#E05A00</small></div>
+    <div class="sw"><i style="background:#b84a00"></i><b>brand-700</b><small>#B84A00</small></div>
+    <div class="sw"><i style="background:#ffb27a"></i><b>brand-300</b><small>#FFB27A</small></div>
+    <div class="sw"><i style="background:#ffd5ad"></i><b>brand-200</b><small>#FFD5AD</small></div>
+    <div class="sw"><i style="background:#ffe4cf"></i><b>brand-100</b><small>#FFE4CF</small></div>
+    <div class="sw"><i style="background:#fff4eb"></i><b>brand-50</b><small>#FFF4EB</small></div>
+    <div class="sw"><i style="background:#fff"></i><b>paper</b><small>#FFFFFF</small></div>
+    <div class="sw"><i style="background:#fafafa"></i><b>mist</b><small>#FAFAFA</small></div>
+    <div class="sw"><i style="background:#f2f2f2"></i><b>fog</b><small>#F2F2F2</small></div>
+    <div class="sw"><i style="background:#e6e6e6"></i><b>line</b><small>#E6E6E6</small></div>
+    <div class="sw"><i style="background:#c2c2c2"></i><b>line-strong</b><small>#C2C2C2</small></div>
+    <div class="sw"><i style="background:#5c5c5c"></i><b>text-body</b><small>#5C5C5C</small></div>
+    <div class="sw"><i style="background:#8a8a8a"></i><b>text-muted</b><small>#8A8A8A</small></div>
+  </div>
+</div></section>
+
+<section class="spec"><div class="container">
+  <h2>Typography</h2>
+  <p class="lede">Comfortaa for display (300 for the hero word, 700 for headings and numbers). Raleway for everything readable. Lining numerals throughout.</p>
+  <table class="type-table" style="border-collapse:collapse; width:100%">
+    <tr><td>display · Comfortaa 300</td><td><span class="display" style="font-size:5.5rem">Newsletter</span></td></tr>
+    <tr><td>h2 · Comfortaa 700 · 48px</td><td><h2 style="font-size:3rem">Find your perfect brew</h2></td></tr>
+    <tr><td>h3 · Comfortaa 700 · 22px</td><td><h3 style="font-size:1.375rem">Oat cold brew</h3></td></tr>
+    <tr><td>stat · Comfortaa 700</td><td><span style="font-family:var(--font-display);font-weight:700;font-size:3.75rem;line-height:1;letter-spacing:-.02em">10K+</span></td></tr>
+    <tr><td>kicker · Raleway 600 · 18px</td><td><span class="kicker">Subscribe and take 10% off your first order.</span></td></tr>
+    <tr><td>body · Raleway 400 · 16px / 1.7</td><td><p class="body">At Brew &amp; Co we believe coffee should be pure, strong and uncompromising. That's why we slow-steep every batch for 16 hours.</p></td></tr>
+    <tr><td>label · Raleway 500 · 14px</td><td><span style="font-size:.875rem;font-weight:500;color:var(--text-body)">65% less acidity</span></td></tr>
+    <tr><td>muted · Raleway 400 · 14px</td><td><span style="font-size:.875rem;color:var(--text-muted)">© 2025 Brew &amp; Co. All rights reserved.</span></td></tr>
+  </table>
+</div></section>
+
+<section class="spec"><div class="container">
+  <h2>Buttons</h2>
+  <p class="lede">The primary button is the page's only hard rectangle. Accent is orange with a 6px radius; outline is for navigation actions.</p>
+  <div class="stack">
+    <div class="row"><a class="btn btn-primary btn-lg" href="#">Buy now</a><a class="btn btn-primary" href="#">Subscribe</a><a class="btn btn-primary btn-sm" href="#">Order now</a><span class="cap">primary · lg / md / sm</span></div>
+    <div class="row"><a class="btn btn-accent" href="#">Request a callback</a><a class="btn btn-outline" href="#">Sign in</a><a class="btn btn-ghost" href="#">View all products</a><button class="btn btn-primary" disabled>Subscribing…</button><span class="cap">accent · outline · ghost · disabled</span></div>
+    <div class="row"><button class="ibtn ibtn-circle" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></button><button class="ibtn ibtn-square" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3Z"/></svg></button><button class="ibtn ibtn-square" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.8 7.8L21.7 21h-6.2l-4.9-6.4L5 21H2l7.3-8.3L1.6 3h6.4l4.4 5.8L17.5 3Zm-1 16.2h1.7L6.9 4.7H5.1l11.4 14.5Z"/></svg></button><span class="cap">icon buttons · circle / square</span></div>
+  </div>
+</div></section>
+
+<section class="spec"><div class="container">
+  <h2>Inputs</h2>
+  <p class="lede">1px line-strong border, 6px radius. The inline form squares the inner corners so input and button read as one control.</p>
+  <div class="row" style="align-items:flex-start; gap:3rem">
+    <div class="field"><label for="a">Email address</label><input class="input" id="a" placeholder="Enter your email" /></div>
+    <div class="field"><label for="b">Phone number</label><input class="input" id="b" value="+1 555 0100" aria-invalid="true" /><span class="err">Enter a number with a country code, like +1 555 0100.</span></div>
+    <form class="inline" onsubmit="return false"><input class="input" aria-label="Email address" placeholder="Enter your email" /><button class="btn btn-primary" type="submit">Subscribe</button></form>
+  </div>
+</div></section>
+
+<section class="spec"><div class="container">
+  <h2>Devices</h2>
+  <p class="lede">Stat rings with a 270° arc, arc media with a hanging tag, corner rails that turn toward an image, and sparkles as placement marks.</p>
+  <ul class="rings" style="padding:2.5rem 0">
+    <li><svg class="sparkle" style="top:-2rem" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 6.5 5.5 11.4 12 12-6.5.6-11.4 5.5-12 12-.6-6.5-5.5-11.4-12-12C6.5 11.4 11.4 6.5 12 0Z"/></svg><div class="ring"><svg class="arc arc-bottom" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="226.2 301.6"/></svg><span class="n">10K+</span><span class="l">Cups served</span></div></li>
+    <li><div class="ring"><svg class="arc arc-top" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="226.2 301.6"/></svg><span class="n">50K+</span><span class="l">Orders shipped</span></div><svg class="sparkle" style="bottom:-2rem" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 6.5 5.5 11.4 12 12-6.5.6-11.4 5.5-12 12-.6-6.5-5.5-11.4-12-12C6.5 11.4 11.4 6.5 12 0Z"/></svg></li>
+    <li><svg class="sparkle" style="top:-2rem" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 6.5 5.5 11.4 12 12-6.5.6-11.4 5.5-12 12-.6-6.5-5.5-11.4-12-12C6.5 11.4 11.4 6.5 12 0Z"/></svg><div class="ring"><svg class="arc arc-bottom" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="226.2 301.6"/></svg><span class="n">50+</span><span class="l">Cities delivered</span></div></li>
+  </ul>
+  <div class="row" style="align-items:flex-start; gap:4rem; margin-top:3rem">
+    <div class="media"><span class="tag" aria-hidden="true">Brew &amp; Co</span><div class="disc"></div><svg class="arc arc-bottom" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="226.2 301.6"/></svg><div class="img"><svg width="220" height="160" viewBox="0 0 220 160" aria-label="Placeholder bowl"><ellipse cx="110" cy="70" rx="95" ry="34" fill="#5a3a22"/><path d="M15 70h190c0 55-45 85-95 85S15 125 15 70Z" fill="#c9a06b"/></svg></div></div>
+    <div class="stack" style="flex:1; min-width: 18rem">
+      <div class="rail rail-tr"><p class="body">Cold brew isn't just coffee, it's a statement. A ritual for those who demand more than the ordinary. At Brew &amp; Co every sip delivers a smooth yet powerful energy boost.</p><a class="btn btn-primary btn-lg" href="#" style="margin-top:1.5rem">Explore the brew</a></div>
+      <div class="rail rail-bl"><h3 style="font-size:2rem; margin-bottom:.75rem">The brew</h3><p class="body">Every bottle is crafted through a meticulous slow-steeping process, ensuring a deep, full-bodied taste with none of the bitterness.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="spec"><div class="container">
+  <h2>Cards</h2>
+  <p class="lede">Product cards are hairline-bordered and gain a warm shadow on hover. Testimonial cards carry the shadow at rest.</p>
+  <div class="row" style="align-items:flex-start; gap:2rem">
+    <article class="pcard"><div class="well"><svg width="120" height="200" viewBox="0 0 120 200" aria-label="Placeholder glass"><path d="M15 10h90l-12 180H27Z" fill="#3b1a0c"/><path d="M15 10h90l-3 40H18Z" fill="#e7d3bd"/></svg></div><div class="body"><h3>Pure black</h3><p>Classic, unfiltered and packed with bold energy.</p><div class="foot"><span class="price">$8.00</span><a class="btn btn-primary btn-sm" href="#">Order now</a></div></div></article>
+    <article class="pcard"><div class="well"><svg width="120" height="200" viewBox="0 0 120 200" aria-label="Placeholder glass"><path d="M15 10h90l-12 180H27Z" fill="#b98a72"/></svg></div><div class="body"><h3>Mocha fix</h3><p>Rich dark chocolate meets smooth caffeine.</p><div class="foot"><span class="price">$8.00</span><a class="btn btn-primary btn-sm" href="#">Order now</a></div></div></article>
+    <figure class="tcard"><div class="av" role="img" aria-label="Avatar placeholder"></div><figcaption>Irene Strong<small>Illustrator</small></figcaption><blockquote>“Slow-steeped and it shows. Zero bitterness, and I'm still sharp at 2am when the deadline hits.”</blockquote></figure>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="container row" style="justify-content:space-between">
+  <a class="logo" href="#" style="font-size:1.25rem">Brew &amp; Co<span>.</span></a>
+  <p style="font-size:.875rem; color:var(--text-muted)">© 2025 Brew &amp; Co. All rights reserved.</p>
+  <a class="btn btn-accent" href="#">Request a callback</a>
+</div></footer>
+
+</body>
+</html>

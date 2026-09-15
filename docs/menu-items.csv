@@ -1,0 +1,21 @@
+category,name,description,price,badges
+Espresso,Single espresso,"A 30 ml shot of our house blend, pulled at 93°C for a thick crema and a chocolate finish.",3.00,
+Espresso,Double espresso,"Two shots of the house blend, the same 25-second pull, twice the depth.",3.75,popular
+Espresso,Ristretto,"A short 20 ml pull that keeps the sweetness and leaves the bitterness behind.",3.25,
+Espresso,Macchiato,"A double shot marked with a spoonful of steamed milk foam.",3.75,house favorite
+Espresso drinks,Flat white,"Double ristretto under a thin layer of velvety microfoam. Served in a 180 ml cup.",4.75,popular
+Espresso drinks,Cappuccino,"Equal parts espresso, steamed milk and foam, dusted with cocoa on request.",4.50,
+Espresso drinks,Oat latte,"Double shot with steamed oat milk, naturally sweet and dairy-free.",5.25,house favorite
+Espresso drinks,Mocha fix,"Espresso and 70% dark chocolate ganache, topped with steamed milk.",5.50,popular
+Espresso drinks,Cortado,"A double shot cut with an equal measure of warm milk. Small and strong.",4.25,
+Pastries,Butter croissant,"Laminated over three days with cultured butter, baked fresh every morning.",3.75,popular
+Pastries,Almond croissant,"Yesterday's croissant reborn with frangipane, flaked almonds and icing sugar.",4.50,house favorite
+Pastries,Cardamom bun,"Soft, knotted dough spiced with cardamom and finished with pearl sugar.",4.25,
+Pastries,Banana bread,"A thick slice with walnuts and a brown-butter glaze. Made with very ripe bananas.",3.95,
+Sandwiches,Bacon and egg roll,"Smoked streaky bacon and a fried egg on a milk bun with house tomato relish.",8.50,popular
+Sandwiches,Turkey and brie,"Roast turkey, brie, cranberry and rocket on toasted sourdough.",9.75,
+Sandwiches,Roast vegetable focaccia,"Grilled courgette, red pepper and aubergine with basil pesto and mozzarella.",9.25,house favorite
+Cold drinks,Cold brew,"Our signature. Slow-steeped for 16 hours, 65% less acidity, twice the caffeine. Served over ice.",5.50,"popular,house favorite"
+Cold drinks,Oat cold brew,"The 16-hour cold brew softened with oat milk. Naturally sweet and dairy-free.",6.00,popular
+Cold drinks,Cold brew tonic,"Cold brew poured over tonic water with a twist of orange peel. Bright and bitter.",6.25,
+Cold drinks,Iced matcha latte,"Ceremonial-grade matcha whisked with your choice of milk over ice.",5.75,

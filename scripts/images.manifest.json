@@ -1,0 +1,252 @@
+[
+  {
+    "file": "hero-cafe.webp",
+    "id": 34094297,
+    "width": 2000,
+    "height": 1250,
+    "fit": "cover",
+    "photographer": "Ánh Đặng",
+    "pageUrl": "https://www.pexels.com/photo/cozy-artisan-coffee-shop-interior-with-warm-light-34094297/"
+  },
+  {
+    "file": "og.jpg",
+    "id": 34094297,
+    "width": 1200,
+    "height": 630,
+    "fit": "cover",
+    "photographer": "Ánh Đặng",
+    "pageUrl": "https://www.pexels.com/photo/cozy-artisan-coffee-shop-interior-with-warm-light-34094297/"
+  },
+  {
+    "file": "about-hero.webp",
+    "id": 6612738,
+    "width": 2000,
+    "height": 1250,
+    "fit": "cover",
+    "photographer": "Pavel Danilyuk",
+    "pageUrl": "https://www.pexels.com/photo/a-woman-standing-behind-the-counter-of-a-coffee-shop-6612738/"
+  },
+  {
+    "file": "about-founders-1.webp",
+    "id": 6205635,
+    "width": 1200,
+    "height": 900,
+    "fit": "cover",
+    "photographer": "Tim Douglas",
+    "pageUrl": "https://www.pexels.com/photo/happy-young-woman-in-apron-smiling-at-camera-6205635/"
+  },
+  {
+    "file": "about-founders-2.webp",
+    "id": 7447297,
+    "width": 1200,
+    "height": 900,
+    "fit": "cover",
+    "photographer": "Gustavo Fring",
+    "pageUrl": "https://www.pexels.com/photo/a-baker-kneading-a-dough-7447297/"
+  },
+  {
+    "file": "about-interior.webp",
+    "id": 34164459,
+    "width": 1200,
+    "height": 900,
+    "fit": "cover",
+    "photographer": "Anthony Dalesandro",
+    "pageUrl": "https://www.pexels.com/photo/cozy-coffee-shop-corner-with-sunlit-table-34164459/"
+  },
+  {
+    "file": "about-beans.webp",
+    "id": 22679455,
+    "width": 1200,
+    "height": 900,
+    "fit": "cover",
+    "photographer": "Bia Sousa",
+    "pageUrl": "https://www.pexels.com/photo/roasted-beans-in-hands-22679455/"
+  },
+  {
+    "file": "event-open-mic.webp",
+    "id": 2419535,
+    "width": 1200,
+    "height": 900,
+    "fit": "cover",
+    "photographer": "Brett Sayles",
+    "pageUrl": "https://www.pexels.com/photo/man-playing-guitar-while-singing-2419535/"
+  },
+  {
+    "file": "event-tasting.webp",
+    "id": 34505585,
+    "width": 1200,
+    "height": 900,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/coffee-tasting-setup-with-cups-and-spoons-34505585/"
+  },
+  {
+    "file": "menu/single-espresso.webp",
+    "id": 1233528,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Di Bella Coffee",
+    "pageUrl": "https://www.pexels.com/photo/selective-focus-photography-of-a-cup-of-black-coffee-1233528/"
+  },
+  {
+    "file": "menu/double-espresso.webp",
+    "id": 9050518,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Mike Jones",
+    "pageUrl": "https://www.pexels.com/photo/close-up-of-a-shot-of-espresso-9050518/"
+  },
+  {
+    "file": "menu/ristretto.webp",
+    "id": 7487362,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Los Muertos Crew",
+    "pageUrl": "https://www.pexels.com/photo/photo-of-espresso-dripping-on-a-small-stainless-mug-7487362/"
+  },
+  {
+    "file": "menu/macchiato.webp",
+    "id": 851555,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Jason Villanueva",
+    "pageUrl": "https://www.pexels.com/photo/close-up-photography-of-cup-of-coffee-851555/"
+  },
+  {
+    "file": "menu/flat-white.webp",
+    "id": 544113,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Tirachard Kumtanom",
+    "pageUrl": "https://www.pexels.com/photo/coffee-cup-with-latte-art-froth-on-white-surface-544113/"
+  },
+  {
+    "file": "menu/cappuccino.webp",
+    "id": 302900,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Chevanon Photography",
+    "pageUrl": "https://www.pexels.com/photo/cappuccino-drink-on-table-302900/"
+  },
+  {
+    "file": "menu/oat-latte.webp",
+    "id": 171346,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "David Bares",
+    "pageUrl": "https://www.pexels.com/photo/latte-on-cup-beside-milk-cup-171346/"
+  },
+  {
+    "file": "menu/mocha-fix.webp",
+    "id": 9823577,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/glass-mug-with-mocha-coffee-and-whipped-cream-9823577/"
+  },
+  {
+    "file": "menu/cortado.webp",
+    "id": 14704662,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/a-cortado-drink-with-latte-art-on-green-ceramic-cup-14704662/"
+  },
+  {
+    "file": "menu/butter-croissant.webp",
+    "id": 19296861,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Marcelo Verfe",
+    "pageUrl": "https://www.pexels.com/photo/delicious-croissant-in-close-up-view-19296861/"
+  },
+  {
+    "file": "menu/almond-croissant.webp",
+    "id": 20179572,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/croissants-with-peanut-butter-filling-20179572/"
+  },
+  {
+    "file": "menu/cardamom-bun.webp",
+    "id": 4828333,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/bun-bread-roll-on-a-grey-plain-background-4828333/"
+  },
+  {
+    "file": "menu/banana-bread.webp",
+    "id": 830894,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/close-up-photography-of-banana-bread-on-saucer-830894/"
+  },
+  {
+    "file": "menu/bacon-and-egg-roll.webp",
+    "id": 9009494,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/a-delicious-bacon-and-egg-toast-on-a-plate-topped-with-leaves-9009494/"
+  },
+  {
+    "file": "menu/turkey-and-brie.webp",
+    "id": 18584484,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/sandwich-with-vegetables-and-cheese-on-a-cutting-board-18584484/"
+  },
+  {
+    "file": "menu/roast-vegetable-focaccia.webp",
+    "id": 30876249,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Beyza Yalçın",
+    "pageUrl": "https://www.pexels.com/photo/rustic-bread-and-tomato-sandwiches-on-a-cutting-board-30876249/"
+  },
+  {
+    "file": "menu/cold-brew.webp",
+    "id": 17576001,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/cold-coffee-in-glass-on-table-17576001/"
+  },
+  {
+    "file": "menu/oat-cold-brew.webp",
+    "id": 16496287,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/close-up-of-a-glass-of-iced-coffee-16496287/"
+  },
+  {
+    "file": "menu/cold-brew-tonic.webp",
+    "id": 11100423,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "pageUrl": "https://www.pexels.com/photo/iced-coffee-on-clear-drinking-glass-11100423/"
+  },
+  {
+    "file": "menu/iced-matcha-latte.webp",
+    "id": 29156485,
+    "width": 800,
+    "height": 800,
+    "fit": "cover",
+    "photographer": "Far MWX",
+    "pageUrl": "https://www.pexels.com/photo/refreshing-iced-matcha-latte-on-a-table-29156485/"
+  }
+]

@@ -1,0 +1,317 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Brew & Co, home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - text: Brew & Co
+        - generic [aria-hidden] [ref=e6]: .
+      - text: / /
+      - generic [ref=e7]:
+        - link "Reserve a table" [ref=e8] [cursor=pointer]:
+          - /url: /reserve
+        - button "Open menu" [ref=e9]
+  - main [ref=e13]:
+    - region "The menu" [ref=e14]:
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Everything we make, priced as it is at the counter.
+        - heading "The menu" [level=1] [ref=e20]
+        - paragraph [ref=e21]: Milk drinks come with oat, soya or skimmed at no extra cost. Sandwiches are made until 3pm. Ask about the beans on the grinder; they change every fortnight.
+    - navigation "Menu categories" [ref=e22]:
+      - list [ref=e23]:
+        - listitem [ref=e24]:
+          - link "Espresso" [ref=e25] [cursor=pointer]:
+            - /url: "#espresso"
+        - listitem [ref=e26]:
+          - link "Espresso drinks" [ref=e27] [cursor=pointer]:
+            - /url: "#espresso-drinks"
+        - listitem [ref=e28]:
+          - link "Pastries" [ref=e29] [cursor=pointer]:
+            - /url: "#pastries"
+        - listitem [ref=e30]:
+          - link "Sandwiches" [ref=e31] [cursor=pointer]:
+            - /url: "#sandwiches"
+        - listitem [ref=e32]:
+          - link "Cold drinks" [ref=e33] [cursor=pointer]:
+            - /url: "#cold-drinks"
+    - region [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - heading "Espresso" [level=2] [ref=e37]
+          - paragraph [ref=e38]: Our house blend, pulled the same way every time.
+        - list [ref=e39]:
+          - listitem [ref=e40]:
+            - article [ref=e41]:
+              - img "A single espresso in a small white cup" [ref=e43]
+              - generic [ref=e44]:
+                - generic [ref=e45]:
+                  - heading "Single espresso" [level=3] [ref=e46]
+                  - generic [ref=e47]: £3.00
+                - paragraph [ref=e48]: A 30 ml shot of our house blend, pulled at 93°C for a thick crema and a chocolate finish.
+          - listitem [ref=e49]:
+            - article [ref=e50]:
+              - img "A double espresso with dark crema" [ref=e52]
+              - generic [ref=e53]:
+                - generic [ref=e54]:
+                  - heading "Double espresso" [level=3] [ref=e55]
+                  - generic [ref=e56]: £3.75
+                - list "Badges" [ref=e57]:
+                  - listitem [ref=e58]: Popular
+                - paragraph [ref=e59]: Two shots of the house blend, the same 25-second pull, twice the depth.
+          - listitem [ref=e60]:
+            - article [ref=e61]:
+              - img "A ristretto shot being pulled from an espresso machine" [ref=e63]
+              - generic [ref=e64]:
+                - generic [ref=e65]:
+                  - heading "Ristretto" [level=3] [ref=e66]
+                  - generic [ref=e67]: £3.25
+                - paragraph [ref=e68]: A short 20 ml pull that keeps the sweetness and leaves the bitterness behind.
+          - listitem [ref=e69]:
+            - article [ref=e70]:
+              - img "An espresso macchiato with a dot of milk foam" [ref=e72]
+              - generic [ref=e73]:
+                - generic [ref=e74]:
+                  - heading "Macchiato" [level=3] [ref=e75]
+                  - generic [ref=e76]: £3.75
+                - list "Badges" [ref=e77]:
+                  - listitem [ref=e78]: House favourite
+                - paragraph [ref=e79]: A double shot marked with a spoonful of steamed milk foam.
+    - region [ref=e80]:
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - heading "Espresso drinks" [level=2] [ref=e83]
+          - paragraph [ref=e84]: Milk drinks made on the same shots. Oat, soya and skimmed at no extra cost.
+        - list [ref=e85]:
+          - listitem [ref=e86]:
+            - article [ref=e87]:
+              - img "A flat white with rosetta latte art" [ref=e89]
+              - generic [ref=e90]:
+                - generic [ref=e91]:
+                  - heading "Flat white" [level=3] [ref=e92]
+                  - generic [ref=e93]: £4.75
+                - list "Badges" [ref=e94]:
+                  - listitem [ref=e95]: Popular
+                - paragraph [ref=e96]: Double ristretto under a thin layer of velvety microfoam. Served in a 180 ml cup.
+          - listitem [ref=e97]:
+            - article [ref=e98]:
+              - img "A cappuccino with thick foam and cocoa dusting" [ref=e100]
+              - generic [ref=e101]:
+                - generic [ref=e102]:
+                  - heading "Cappuccino" [level=3] [ref=e103]
+                  - generic [ref=e104]: £4.50
+                - paragraph [ref=e105]: Equal parts espresso, steamed milk and foam, dusted with cocoa on request.
+          - listitem [ref=e106]:
+            - article [ref=e107]:
+              - img "A latte in a glass with layered oat milk" [ref=e109]
+              - generic [ref=e110]:
+                - generic [ref=e111]:
+                  - heading "Oat latte" [level=3] [ref=e112]
+                  - generic [ref=e113]: £5.25
+                - list "Badges" [ref=e114]:
+                  - listitem [ref=e115]: House favourite
+                - paragraph [ref=e116]: Double shot with steamed oat milk, naturally sweet and dairy-free.
+          - listitem [ref=e117]:
+            - article [ref=e118]:
+              - img "A mocha topped with milk foam and chocolate" [ref=e120]
+              - generic [ref=e121]:
+                - generic [ref=e122]:
+                  - heading "Mocha fix" [level=3] [ref=e123]
+                  - generic [ref=e124]: £5.50
+                - list "Badges" [ref=e125]:
+                  - listitem [ref=e126]: Popular
+                - paragraph [ref=e127]: Espresso and 70% dark chocolate ganache, topped with steamed milk.
+          - listitem [ref=e128]:
+            - article [ref=e129]:
+              - img "A cortado in a small glass" [ref=e131]
+              - generic [ref=e132]:
+                - generic [ref=e133]:
+                  - heading "Cortado" [level=3] [ref=e134]
+                  - generic [ref=e135]: £4.25
+                - paragraph [ref=e136]: A double shot cut with an equal measure of warm milk. Small and strong.
+    - region [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - heading "Pastries" [level=2] [ref=e140]
+          - paragraph [ref=e141]: Laminated on site and baked before we open.
+        - list [ref=e142]:
+          - listitem [ref=e143]:
+            - article [ref=e144]:
+              - img "A golden butter croissant" [ref=e146]
+              - generic [ref=e147]:
+                - generic [ref=e148]:
+                  - heading "Butter croissant" [level=3] [ref=e149]
+                  - generic [ref=e150]: £3.75
+                - list "Badges" [ref=e151]:
+                  - listitem [ref=e152]: Popular
+                - paragraph [ref=e153]: Laminated over three days with cultured butter, baked fresh every morning.
+          - listitem [ref=e154]:
+            - article [ref=e155]:
+              - img "An almond croissant dusted with icing sugar" [ref=e157]
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - heading "Almond croissant" [level=3] [ref=e160]
+                  - generic [ref=e161]: £4.50
+                - list "Badges" [ref=e162]:
+                  - listitem [ref=e163]: House favourite
+                - paragraph [ref=e164]: Yesterday's croissant reborn with frangipane, flaked almonds and icing sugar.
+          - listitem [ref=e165]:
+            - article [ref=e166]:
+              - img "A knotted cardamom bun with pearl sugar" [ref=e168]
+              - generic [ref=e169]:
+                - generic [ref=e170]:
+                  - heading "Cardamom bun" [level=3] [ref=e171]
+                  - generic [ref=e172]: £4.25
+                - paragraph [ref=e173]: Soft, knotted dough spiced with cardamom and finished with pearl sugar.
+          - listitem [ref=e174]:
+            - article [ref=e175]:
+              - img "A slice of banana bread with walnuts" [ref=e177]
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - heading "Banana bread" [level=3] [ref=e180]
+                  - generic [ref=e181]: £3.95
+                - paragraph [ref=e182]: A thick slice with walnuts and a brown-butter glaze. Made with very ripe bananas.
+    - region [ref=e183]:
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - heading "Sandwiches" [level=2] [ref=e186]
+          - paragraph [ref=e187]: Made to order until 3pm, on sourdough from the bakery two doors down.
+        - list [ref=e188]:
+          - listitem [ref=e189]:
+            - article [ref=e190]:
+              - img "A bacon and fried egg roll on a plate" [ref=e192]
+              - generic [ref=e193]:
+                - generic [ref=e194]:
+                  - heading "Bacon and egg roll" [level=3] [ref=e195]
+                  - generic [ref=e196]: £8.50
+                - list "Badges" [ref=e197]:
+                  - listitem [ref=e198]: Popular
+                - paragraph [ref=e199]: Smoked streaky bacon and a fried egg on a milk bun with house tomato relish.
+          - listitem [ref=e200]:
+            - article [ref=e201]:
+              - img "A toasted sourdough sandwich cut in half" [ref=e203]
+              - generic [ref=e204]:
+                - generic [ref=e205]:
+                  - heading "Turkey and brie" [level=3] [ref=e206]
+                  - generic [ref=e207]: £9.75
+                - paragraph [ref=e208]: Roast turkey, brie, cranberry and rocket on toasted sourdough.
+          - listitem [ref=e209]:
+            - article [ref=e210]:
+              - img "A focaccia sandwich filled with roasted vegetables" [ref=e212]
+              - generic [ref=e213]:
+                - generic [ref=e214]:
+                  - heading "Roast vegetable focaccia" [level=3] [ref=e215]
+                  - generic [ref=e216]: £9.25
+                - list "Badges" [ref=e217]:
+                  - listitem [ref=e218]: House favourite
+                - paragraph [ref=e219]: Grilled courgette, red pepper and aubergine with basil pesto and mozzarella.
+    - region [ref=e220]:
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - heading "Cold drinks" [level=2] [ref=e223]
+          - paragraph [ref=e224]: Cold brew is steeped overnight; everything else is made when you order.
+        - list [ref=e225]:
+          - listitem [ref=e226]:
+            - article [ref=e227]:
+              - img "A tall glass of cold brew over ice" [ref=e229]
+              - generic [ref=e230]:
+                - generic [ref=e231]:
+                  - heading "Cold brew" [level=3] [ref=e232]
+                  - generic [ref=e233]: £5.50
+                - list "Badges" [ref=e234]:
+                  - listitem [ref=e235]: Popular
+                  - listitem [ref=e236]: House favourite
+                - paragraph [ref=e237]: Our signature. Slow-steeped for 16 hours, 65% less acidity, twice the caffeine. Served over ice.
+          - listitem [ref=e238]:
+            - article [ref=e239]:
+              - img "Iced coffee with oat milk swirling through it" [ref=e241]
+              - generic [ref=e242]:
+                - generic [ref=e243]:
+                  - heading "Oat cold brew" [level=3] [ref=e244]
+                  - generic [ref=e245]: £6.00
+                - list "Badges" [ref=e246]:
+                  - listitem [ref=e247]: Popular
+                - paragraph [ref=e248]: The 16-hour cold brew softened with oat milk. Naturally sweet and dairy-free.
+          - listitem [ref=e249]:
+            - article [ref=e250]:
+              - img "A glass of cold brew tonic with an orange twist" [ref=e252]
+              - generic [ref=e253]:
+                - generic [ref=e254]:
+                  - heading "Cold brew tonic" [level=3] [ref=e255]
+                  - generic [ref=e256]: £6.25
+                - paragraph [ref=e257]: Cold brew poured over tonic water with a twist of orange peel. Bright and bitter.
+          - listitem [ref=e258]:
+            - article [ref=e259]:
+              - img "An iced matcha latte in a tall glass" [ref=e261]
+              - generic [ref=e262]:
+                - generic [ref=e263]:
+                  - heading "Iced matcha latte" [level=3] [ref=e264]
+                  - generic [ref=e265]: £5.75
+                - paragraph [ref=e266]: Ceremonial-grade matcha whisked with your choice of milk over ice.
+    - region [ref=e267]:
+      - generic [ref=e268]:
+        - heading "Decided?" [level=2] [ref=e269]
+        - paragraph [ref=e270]: Walk-ins are always welcome. If you're four or more, or coming on a Friday night, a reservation saves the wait.
+        - link "Reserve a table" [ref=e271] [cursor=pointer]:
+          - /url: /reserve
+  - contentinfo [ref=e272]:
+    - generic [ref=e273]:
+      - generic [ref=e274]:
+        - link "Brew & Co, home" [ref=e275] [cursor=pointer]:
+          - /url: /
+          - text: Brew & Co
+          - generic [aria-hidden] [ref=e276]: .
+        - paragraph [ref=e277]: Specialty coffee, fresh pastries and light lunches on a quiet street in Clapham.
+        - list [ref=e278]:
+          - listitem [ref=e279]:
+            - link "Brew & Co on Instagram" [ref=e280] [cursor=pointer]:
+              - /url: https://instagram.com/brewandco.london
+          - listitem [ref=e284]:
+            - link "Brew & Co on Facebook" [ref=e285] [cursor=pointer]:
+              - /url: https://facebook.com/brewandco.london
+      - navigation "Visit" [ref=e289]:
+        - heading "Visit" [level=2] [ref=e290]
+        - list [ref=e291]:
+          - listitem [ref=e292]:
+            - link "Menu" [ref=e293] [cursor=pointer]:
+              - /url: /menu
+          - listitem [ref=e294]:
+            - link "About us" [ref=e295] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e296]:
+            - link "Reserve a table" [ref=e297] [cursor=pointer]:
+              - /url: /reserve
+      - navigation "Events" [ref=e298]:
+        - heading "Events" [level=2] [ref=e299]
+        - list [ref=e300]:
+          - listitem [ref=e301]:
+            - link "Open mic night, Fridays" [ref=e302] [cursor=pointer]:
+              - /url: /#events
+          - listitem [ref=e303]:
+            - link "Coffee tasting, Saturdays" [ref=e304] [cursor=pointer]:
+              - /url: /#events
+      - generic [ref=e305]:
+        - heading "Find us" [level=2] [ref=e306]
+        - generic [ref=e307]:
+          - paragraph [ref=e308]: 14 Abbeville Road, Clapham, London SW4 9LA
+          - paragraph [ref=e309]:
+            - link "020 7946 0123" [ref=e310] [cursor=pointer]:
+              - /url: tel:+442079460123
+          - paragraph [ref=e311]:
+            - link "hello@brewandco.london" [ref=e312] [cursor=pointer]:
+              - /url: mailto:hello@brewandco.london
+        - generic [ref=e313]:
+          - generic [ref=e314]:
+            - term [ref=e315]: Mon–Thu
+            - definition [ref=e316]: 7am–6pm
+          - generic [ref=e317]:
+            - term [ref=e318]: Fri
+            - definition [ref=e319]: 7am–10pm
+          - generic [ref=e320]:
+            - term [ref=e321]: Sat
+            - definition [ref=e322]: 8am–6pm
+          - generic [ref=e323]:
+            - term [ref=e324]: Sun
+            - definition [ref=e325]: 8am–4pm
+    - paragraph [ref=e327]: © 2026 Brew & Co. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e333] [cursor=pointer]
