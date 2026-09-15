@@ -22,10 +22,10 @@ export const site = {
   /** Opening hours per weekday, 24-hour "HH:MM", London local time. */
   hours: {
     0: { open: "08:00", close: "16:00" },
-    1: { open: "07:00", close: "18:00" },
-    2: { open: "07:00", close: "18:00" },
-    3: { open: "07:00", close: "18:00" },
-    4: { open: "07:00", close: "18:00" },
+    1: { open: "07:00", close: "22:00" },
+    2: { open: "07:00", close: "22:00" },
+    3: { open: "07:00", close: "22:00" },
+    4: { open: "07:00", close: "22:00" },
     5: { open: "07:00", close: "22:00" },
     6: { open: "08:00", close: "18:00" },
   } satisfies Record<Weekday, OpeningHours>,
@@ -52,7 +52,7 @@ export function formatAddress() {
   return `${a.street}, ${a.area}, ${a.city} ${a.postcode}`;
 }
 
-/** Groups consecutive weekdays with identical hours: "Mon–Thu 7am–6pm". */
+/** Groups consecutive weekdays with identical hours: "Mon–Thu 7am–10pm". */
 export function hoursSummary(): Array<{ days: string; hours: string }> {
   const order: Weekday[] = [1, 2, 3, 4, 5, 6, 0];
   const short = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
